@@ -11,3 +11,6 @@
 - Model checkpoints and datasets are not bundled. Their own terms apply.
 - Manuscript content and archived experimental summaries are research artifacts;
   no third-party publication rights are granted by the code license.
+
+- Archived AAAI `.sty`/`.bst` files retain their original embedded notices;
+  preserving these templates does not relicense them under the project MIT license.

@@ -1,0 +1,370 @@
+{
+  "scope": "code and paper only; no private material or old private Git history",
+  "files": [
+    {
+      "local_path": "figures/ShapeShift-Arch.pdf",
+      "repository_path": "paper/figures/ShapeShift-Arch.pdf",
+      "sha256": "eeb1186ae7cfa4953ceaea795a0f48076dbb5f98368a87f6bd9d70e13c92c382"
+    },
+    {
+      "local_path": "figures/bar_coda17b_mean.pdf",
+      "repository_path": "paper/figures/bar_coda17b_mean.pdf",
+      "sha256": "079dad4de577c667112aa0ef3678dcd8e8af0c170232498994c20ba1db8c1044"
+    },
+    {
+      "local_path": "figures/bar_coda17b_p95.pdf",
+      "repository_path": "paper/figures/bar_coda17b_p95.pdf",
+      "sha256": "e02cfa5c56d5f1f5952344400a5c982d8125b5d7420e7a9d68aa103dd7e06222"
+    },
+    {
+      "local_path": "figures/bar_coda17b_throughput.pdf",
+      "repository_path": "paper/figures/bar_coda17b_throughput.pdf",
+      "sha256": "0c99403b5626a9dd52119fb417c39ff13bbd2466106b88ac823c99ad593b5899"
+    },
+    {
+      "local_path": "figures/bar_dinfer_wrapper_mean.pdf",
+      "repository_path": "paper/figures/bar_dinfer_wrapper_mean.pdf",
+      "sha256": "4e374e5596d0e7016f632f98a374d674a9ba66c556e84e62d80d4ebca0d7d88a"
+    },
+    {
+      "local_path": "figures/bar_dinfer_wrapper_p95.pdf",
+      "repository_path": "paper/figures/bar_dinfer_wrapper_p95.pdf",
+      "sha256": "b2b5ffa428c817d5560690e6b516f43af3bc007e8b0c44867b3856ca6b1a362e"
+    },
+    {
+      "local_path": "figures/bar_dinfer_wrapper_throughput.pdf",
+      "repository_path": "paper/figures/bar_dinfer_wrapper_throughput.pdf",
+      "sha256": "4dadfe84db792200d43b4037d5818fed293a234193172e5b75f602d4a3e623ec"
+    },
+    {
+      "local_path": "figures/bar_dream7b_mean.pdf",
+      "repository_path": "paper/figures/bar_dream7b_mean.pdf",
+      "sha256": "29a1d12de324862e7ac77419b365a2e0d81dfb166bfee3e38d5934dc19ad7105"
+    },
+    {
+      "local_path": "figures/bar_dream7b_p95.pdf",
+      "repository_path": "paper/figures/bar_dream7b_p95.pdf",
+      "sha256": "02cfbe077c4a43272039f82abe3c502934366c069ce7f1b36c836bc402bbe87a"
+    },
+    {
+      "local_path": "figures/bar_dream7b_throughput.pdf",
+      "repository_path": "paper/figures/bar_dream7b_throughput.pdf",
+      "sha256": "b9ad9b84bdad01480c6d3160c87b5f5327a17390ccdb449f01ca169887b29b6e"
+    },
+    {
+      "local_path": "figures/bar_llada2mini_mean.pdf",
+      "repository_path": "paper/figures/bar_llada2mini_mean.pdf",
+      "sha256": "dfcab0c998c4ee12ff0ca46e3e585df1afb0a69cd87699ca6e102d6154237e98"
+    },
+    {
+      "local_path": "figures/bar_llada2mini_p95.pdf",
+      "repository_path": "paper/figures/bar_llada2mini_p95.pdf",
+      "sha256": "31f629b242a7be4b27c9dfe9fc6f318ee59da39d8fb3d4fb97746b2ce49e8b36"
+    },
+    {
+      "local_path": "figures/bar_llada2mini_throughput.pdf",
+      "repository_path": "paper/figures/bar_llada2mini_throughput.pdf",
+      "sha256": "3f11f9af7c46e54ae9729112d1aa305af93e55bb4c2656f92cbc7c50932bca26"
+    },
+    {
+      "local_path": "figures/bar_llada8b_ablation_mean.pdf",
+      "repository_path": "paper/figures/bar_llada8b_ablation_mean.pdf",
+      "sha256": "cb9673763381666ef91b3ba901816beb93e820424540ff9429dd65732f56aec4"
+    },
+    {
+      "local_path": "figures/bar_llada8b_ablation_p95.pdf",
+      "repository_path": "paper/figures/bar_llada8b_ablation_p95.pdf",
+      "sha256": "4ce885240c0078e3375507cd71afb0fe24cce19b9e5cc620ab9ede54849c7044"
+    },
+    {
+      "local_path": "figures/bar_llada8b_ablation_throughput.pdf",
+      "repository_path": "paper/figures/bar_llada8b_ablation_throughput.pdf",
+      "sha256": "a981fd3f9bf6bd4ddf4e3f0adc097d2a123be8243d7fea494b4e448d49ca73c2"
+    },
+    {
+      "local_path": "figures/bar_llada8b_fullstep_p95.pdf",
+      "repository_path": "paper/figures/bar_llada8b_fullstep_p95.pdf",
+      "sha256": "529f4352567645033d2d65331739026cc09275eab97b206592e322b8ccdb73c7"
+    },
+    {
+      "local_path": "figures/bar_llada8b_fullstep_throughput.pdf",
+      "repository_path": "paper/figures/bar_llada8b_fullstep_throughput.pdf",
+      "sha256": "dfed6d4de7ccd051dfa18989c3b39d09188188e87e14d6d96090473b7f44d263"
+    },
+    {
+      "local_path": "figures/bar_llada8b_mean.pdf",
+      "repository_path": "paper/figures/bar_llada8b_mean.pdf",
+      "sha256": "d28cc04e9c0cc9dee0ef4700081e40c3d8c79ebcea5dfba0b05c184ad17f770e"
+    },
+    {
+      "local_path": "figures/bar_llada8b_p95.pdf",
+      "repository_path": "paper/figures/bar_llada8b_p95.pdf",
+      "sha256": "d4665435bed22b1c2a162f094f5d7070fc835cd6c7fd70785a97dc028aefd3c0"
+    },
+    {
+      "local_path": "figures/bar_llada8b_throughput.pdf",
+      "repository_path": "paper/figures/bar_llada8b_throughput.pdf",
+      "sha256": "cd3764926b0ed2c250cff1a042ab2e684f578bae6d2351ecff49de846153c249"
+    },
+    {
+      "local_path": "figures/fig_ablation_combined.pdf",
+      "repository_path": "paper/figures/fig_ablation_combined.pdf",
+      "sha256": "c76717616dd1601da12f507af7ae8cf140e7031503146daaca1703d80d81073b"
+    },
+    {
+      "local_path": "figures/fig_dinfer_combined.pdf",
+      "repository_path": "paper/figures/fig_dinfer_combined.pdf",
+      "sha256": "f142945e6b1dccfabe2b712592047495704c2d7ed6d40a1d87ca5119e205c367"
+    },
+    {
+      "local_path": "figures/fig_fullstep_combined.pdf",
+      "repository_path": "paper/figures/fig_fullstep_combined.pdf",
+      "sha256": "41d80caf716edc25c73e316a155150e8de4d02e0a6964559b9315716eda94017"
+    },
+    {
+      "local_path": "figures/fig_main_online_combined.pdf",
+      "repository_path": "paper/figures/fig_main_online_combined.pdf",
+      "sha256": "6dd20ed2d574738cd244746b44e3b32f33e5989966698aea8699348830e76799"
+    },
+    {
+      "local_path": "figures/sensitivity_sweeps.pdf",
+      "repository_path": "paper/figures/sensitivity_sweeps.pdf",
+      "sha256": "d3aa6aa551b7276d79500047d4625f32a4294306a3f1bcb83edf80f81c6088e4"
+    },
+    {
+      "local_path": "figures/sensitivity_sweeps.png",
+      "repository_path": "paper/figures/sensitivity_sweeps.png",
+      "sha256": "4e168dac04de61563c8e76a31bfb744ba4773aa12d50e38ac44d11d4d29ca9ab"
+    },
+    {
+      "local_path": "figures/shapeshift-arch.drawio",
+      "repository_path": "paper/figures/shapeshift-arch.drawio",
+      "sha256": "a7b53687c350edefd7810f7a2fc2bf34eaa1b46febbc4496f1e6e525e7b17211"
+    },
+    {
+      "local_path": "main.tex",
+      "repository_path": "paper/main.tex",
+      "sha256": "ddcedf865808740baba7c1487851b2ab2a8646e84504cc374db8135c82194874"
+    },
+    {
+      "local_path": "references.bib",
+      "repository_path": "paper/references.bib",
+      "sha256": "d0553697d33b9afc5d759aed0d0e745c51430b502e018350c5cde5eba3c4ca34"
+    },
+    {
+      "local_path": "llncs.cls",
+      "repository_path": "paper/llncs.cls",
+      "sha256": "e9894c92191fcd195eef3120a36d2f75b52030eadcbdc3ce1463179746526e6a"
+    },
+    {
+      "local_path": "splncs04.bst",
+      "repository_path": "paper/splncs04.bst",
+      "sha256": "f36c3a17e5304a692706359aafa9de709395a085e579eb47c027095aeaa35174"
+    },
+    {
+      "local_path": "main.pdf",
+      "repository_path": "paper/ShapeShift-camera-ready.pdf",
+      "sha256": "81a911da1c5b70a71ce46540f016fa73b4c9febf546196d9093962795d1d1f32"
+    },
+    {
+      "local_path": "camera-ready/193_Final.pdf",
+      "repository_path": "paper/ShapeShift-camera-ready.pdf",
+      "sha256": "81a911da1c5b70a71ce46540f016fa73b4c9febf546196d9093962795d1d1f32"
+    },
+    {
+      "local_path": "plot_ablation_llada8b.py",
+      "repository_path": "paper/plot_ablation_llada8b.py",
+      "sha256": "6f67aea9b8680fb4b87d917e4e555f254a2ad4f0263d90dfb8a7b3570f26cb60"
+    },
+    {
+      "local_path": "plot_all_figures.py",
+      "repository_path": "paper/archive/local-plot-entry/plot_all_figures.py",
+      "sha256": "9a4af1ff308080d70dddd08fe54ac78a7e7d0d20212e1b5b828998edce9bb4ad"
+    },
+    {
+      "local_path": "plot_dinfer_wrapper.py",
+      "repository_path": "paper/plot_dinfer_wrapper.py",
+      "sha256": "8ff1081445689d53cdddadc8b955f5c15073b28e8b821177468bb8b0cb8f9587"
+    },
+    {
+      "local_path": "plot_fullstep_llada8b.py",
+      "repository_path": "paper/plot_fullstep_llada8b.py",
+      "sha256": "67a42df482f4819a1b4aad1758cfaa4439eaf04b3fbd640f61bca2f24496f5a1"
+    },
+    {
+      "local_path": "plot_main_online_combined.py",
+      "repository_path": "paper/plot_main_online_combined.py",
+      "sha256": "e13e305965180d21fb504e7dc895dab0dd7da28dd8b37b20766014050f5f1c38"
+    },
+    {
+      "local_path": "plot_utils.py",
+      "repository_path": "paper/plot_utils.py",
+      "sha256": "77eb8faa1d2a3bbff69d4cc968e61d5ecd54c3c6ed598596bc9ce6fcee32dac6"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/README.md",
+      "repository_path": "paper/archive/aaai-draft/README.md",
+      "sha256": "f29fc0f9a4ac442707c193dd7a646280213af8263c1b332903e93858ec2abcc7"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/aaai2027.bst",
+      "repository_path": "paper/archive/aaai-draft/aaai2027.bst",
+      "sha256": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/aaai2027.sty",
+      "repository_path": "paper/archive/aaai-draft/aaai2027.sty",
+      "sha256": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/.gitkeep",
+      "repository_path": "paper/archive/aaai-draft/figures/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/ShapeShift-Arch.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/ShapeShift-Arch.pdf",
+      "sha256": "eeb1186ae7cfa4953ceaea795a0f48076dbb5f98368a87f6bd9d70e13c92c382"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_coda17b_mean.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_coda17b_mean.pdf",
+      "sha256": "079dad4de577c667112aa0ef3678dcd8e8af0c170232498994c20ba1db8c1044"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_coda17b_p95.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_coda17b_p95.pdf",
+      "sha256": "e02cfa5c56d5f1f5952344400a5c982d8125b5d7420e7a9d68aa103dd7e06222"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_coda17b_throughput.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_coda17b_throughput.pdf",
+      "sha256": "0c99403b5626a9dd52119fb417c39ff13bbd2466106b88ac823c99ad593b5899"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_dinfer_wrapper_mean.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_dinfer_wrapper_mean.pdf",
+      "sha256": "c10f909ba8460ff85d459f9a2f105346e2062a32ab888a1ca91b48cf80a402c3"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_dinfer_wrapper_p95.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_dinfer_wrapper_p95.pdf",
+      "sha256": "c9cbab69151206d5dc0b6dc5c9c475c23f71c6d599774068776b2b9ac262bdee"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_dinfer_wrapper_throughput.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_dinfer_wrapper_throughput.pdf",
+      "sha256": "02e38d49b96f2a6962c85f310190ec07eab6709baa357363c2cb4de83935e90f"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_dream7b_mean.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_dream7b_mean.pdf",
+      "sha256": "29a1d12de324862e7ac77419b365a2e0d81dfb166bfee3e38d5934dc19ad7105"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_dream7b_p95.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_dream7b_p95.pdf",
+      "sha256": "02cfbe077c4a43272039f82abe3c502934366c069ce7f1b36c836bc402bbe87a"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_dream7b_throughput.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_dream7b_throughput.pdf",
+      "sha256": "b9ad9b84bdad01480c6d3160c87b5f5327a17390ccdb449f01ca169887b29b6e"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_llada2mini_mean.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_llada2mini_mean.pdf",
+      "sha256": "dfcab0c998c4ee12ff0ca46e3e585df1afb0a69cd87699ca6e102d6154237e98"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_llada2mini_p95.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_llada2mini_p95.pdf",
+      "sha256": "31f629b242a7be4b27c9dfe9fc6f318ee59da39d8fb3d4fb97746b2ce49e8b36"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_llada2mini_throughput.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_llada2mini_throughput.pdf",
+      "sha256": "3f11f9af7c46e54ae9729112d1aa305af93e55bb4c2656f92cbc7c50932bca26"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_llada8b_ablation_mean.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_llada8b_ablation_mean.pdf",
+      "sha256": "6dc790e5e4f5234fffc2c02c429c1f519d17598a8079085557ab511f11ea0a79"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_llada8b_ablation_p95.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_llada8b_ablation_p95.pdf",
+      "sha256": "d9d6a552da4d2a295b3e57114e94d7d68ac7699bcf1dd8af7e055ff5417f61f3"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_llada8b_ablation_throughput.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_llada8b_ablation_throughput.pdf",
+      "sha256": "2591d6699bc5283eb97b80f80336c8701a50830120a6d3cddc162615c71fb889"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_llada8b_fullstep_p95.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_llada8b_fullstep_p95.pdf",
+      "sha256": "2f489000ffa9e5d2104a07e8dafdec39e63d665a8af37629b1d4b8ebbd968102"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_llada8b_fullstep_throughput.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_llada8b_fullstep_throughput.pdf",
+      "sha256": "f01e0c8b32b177f39d6cb6d302c799f3f066fb982181b804018e18c61b8c3574"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_llada8b_mean.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_llada8b_mean.pdf",
+      "sha256": "d28cc04e9c0cc9dee0ef4700081e40c3d8c79ebcea5dfba0b05c184ad17f770e"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_llada8b_p95.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_llada8b_p95.pdf",
+      "sha256": "d4665435bed22b1c2a162f094f5d7070fc835cd6c7fd70785a97dc028aefd3c0"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/figures/bar_llada8b_throughput.pdf",
+      "repository_path": "paper/archive/aaai-draft/figures/bar_llada8b_throughput.pdf",
+      "sha256": "cd3764926b0ed2c250cff1a042ab2e684f578bae6d2351ecff49de846153c249"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/main.pdf",
+      "repository_path": "paper/archive/aaai-draft/main.pdf",
+      "sha256": "fc46c5880ce5172de1cdc890ac4ceea21aad8751b1e6e0d682f0b69e100e8ef9"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/main.tex",
+      "repository_path": "paper/archive/aaai-draft/main.tex",
+      "sha256": "ca15aae51a3121f03198aabe9e80fcf9cb327b62cd1caf8a0b1a5caa322afc7d"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/plot_ablation_llada8b.py",
+      "repository_path": "paper/archive/aaai-draft/plot_ablation_llada8b.py",
+      "sha256": "b88a9e71a30b973adfb58853a5eb8ffb1f0a37e6bd51d23690a58fbaa5ad6a7d"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/plot_dinfer_wrapper.py",
+      "repository_path": "paper/archive/aaai-draft/plot_dinfer_wrapper.py",
+      "sha256": "2fad04a2bdda7e47c73ef9707001b3daee5e85743c442dca1977a4ba46164aaf"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/plot_fullstep_llada8b.py",
+      "repository_path": "paper/archive/aaai-draft/plot_fullstep_llada8b.py",
+      "sha256": "dc2af154798e40241254daad0d30c45ecc5bfce2106a1560ad28066578fe6201"
+    },
+    {
+      "local_path": "diffusion-llm/cache-sparse-attention/papers/active-set-runtime-aaai/references.bib",
+      "repository_path": "paper/archive/aaai-draft/references.bib",
+      "sha256": "625568b5438a7362f32697d6395a8c4cf34a1dc12b3c4b7f8779532a7d30f55f"
+    },
+    {
+      "local_path": "aaai2027.sty",
+      "repository_path": "paper/archive/aaai-draft/aaai2027.sty",
+      "sha256": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623"
+    },
+    {
+      "local_path": "aaai2027.bst",
+      "repository_path": "paper/archive/aaai-draft/aaai2027.bst",
+      "sha256": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c"
+    }
+  ]
+}

@@ -7,13 +7,15 @@ This directory is the single canonical paper entry point for this release.
   from the author's camera-ready source package.
 - `llncs.cls`, `splncs04.bst`: original LNCS templates; retain their notices.
 - `plot_*.py`: author-supplied plotting scripts and shared helpers.
-- `manifest.json`: SHA-256 checksums of the preserved source, figures, and PDF.
+- `manifest.json`: original release checksums of the canonical source, figures, and PDF.
+- `archive/`: clearly superseded paper materials.
+- `../docs/LOCAL_FILE_BACKUP.json`: local-file mapping and checksums, including extra figures.
 
 The camera-ready package's main source, bibliography and templates were checked
 byte-for-byte against the author's current working directory and matched. Its
 PDF matched the current working PDF as well. The earlier anonymous AAAI draft
-is superseded and excluded from this public release; it remains in the author's
-private archive. No paragraphs or experimental numbers were merged from it.
+is superseded and retained in `archive/aaai-draft/` for recovery.
+No paragraphs or experimental numbers were merged from it.
 
 Conference submission bundles, signed license/copyright forms, spreadsheet
 forms, presentation drafts, editor files and build logs are excluded. The

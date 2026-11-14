@@ -57,7 +57,8 @@ Dream, CoDA, and LLaDA2-mini integrations have not been recovered.
 
 The paper has one canonical public version: [camera-ready PDF](paper/ShapeShift-camera-ready.pdf)
 and [LaTeX source](paper/main.tex). See [paper provenance and build instructions](paper/README.md).
-The earlier anonymous AAAI draft is not distributed. Paper results describe the
+The earlier anonymous AAAI draft is preserved under `paper/archive/aaai-draft/`
+for recovery and is explicitly superseded. Paper results describe the
 original implementation; this repository's reconstructed runtime is a separate
 artifact. Some plot scripts transcribe table values rather than regenerate experiments.
 
@@ -73,3 +74,5 @@ See [the detailed inventory (中文)](docs/PUBLICATION_PLAN.zh-CN.md).
 Original project code uses the existing [MIT license](LICENSE).
 [Third-party notices](THIRD_PARTY_NOTICES.md) identify external components and
 paper templates. See [CONTRIBUTING.md](CONTRIBUTING.md) for validation requirements.
+
+For local cleanup and the exact backup scope, see [LOCAL_CLEANUP.md](docs/LOCAL_CLEANUP.md).
