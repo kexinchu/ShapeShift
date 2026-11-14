@@ -2,4 +2,4 @@
 from .scheduler import Request, ShapeShiftScheduler
 
 __all__ = ["Request", "ShapeShiftScheduler"]
-__version__ = "0.1.0"
+__version__ = "0.2.0"

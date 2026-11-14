@@ -53,7 +53,7 @@ class SchedulerTests(unittest.TestCase):
         self.assertEqual(s.schedule(), [r[1], new])
 
     def test_compatibility(self):
-        s, r = self.make([100], max_batch=8)
+        s, r = self.make([100], max_batch=8, compatibility_mode="strict")
         for spec in (dict(step=1), dict(leap=True), dict(gen=16)):
             s.admit(*state(100, **spec))
         self.assertEqual(s.schedule(), r)
@@ -103,6 +103,7 @@ class SchedulerTests(unittest.TestCase):
             path = Path(tmp) / "trace.csv"
             s, _ = self.make([100, 110], max_batch=2, trace_csv=path)
             s.schedule()
+            s.flush_trace()
             with path.open() as f:
                 row = list(csv.DictReader(f))[0]
             self.assertEqual(int(row["padded_tokens"]), 220)

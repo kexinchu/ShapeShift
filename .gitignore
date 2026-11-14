@@ -99,3 +99,7 @@ build/
 
 # Canonical paper PDF is named explicitly; ignore regenerated builds.
 /paper/main.pdf
+
+# Private experiment inputs and v2 run outputs
+/data/
+/runs/

@@ -16,42 +16,18 @@ arbitrary load. FIFO admission bounds the active pool. FIFO, shape-only, and
 aging-only policies share the same admission limit and compatibility rules.
 
 The dlmserve adapter preserves the upstream per-request denoising state and
-only replaces the scheduler. Compatibility requires equal block position,
-block size, steps per block, generation length, and sampling settings.
+only replaces the scheduler. The v2 default allows different block/step progress; compatibility still requires
+equal block size, steps per block, generation length, and sampling settings.
 Nonzero temperature is rejected because upstream does not preserve individual
 request RNGs through batched execution. Pending cancelled futures are removed.
 
-## GPU benchmark
+## GPU benchmark (v2)
 
-Install `python -m pip install -e '.[runtime]'` on a CUDA Linux host. The extra
-pins dlmserve to commit `dd3efe743a65e0142627e105e8d18bcc1c33d6cb`; this is the
-reconstruction's dependency, not a claimed original experiment revision.
-Download an authorized LLaDA checkpoint separately. Supply a CSV with columns
-`source,request_uid,prompt_len,gen_len,total_len`, with one row per request.
-An artificial example is provided in `examples/synthetic_lengths.csv`.
-
-```bash
-python cache-sparse-attention/code/run_dlmserve_online_trace_benchmark.py \
-  --model /path/to/LLaDA-8B-Instruct \
-  --trace examples/synthetic_lengths.csv --source synthetic \
-  --n_requests 8 --max_batch 4 --steps 8 --gen_length 128 \
-  --arrival_gap_ms 0 --seed 13 --shape_slo_ms 5000 \
-  --active_pool_factor 4 --padding_ratio 1.25 \
-  --policies fifo,length_bucket,aging_bucket,shapeshift \
-  --tag reconstructed_smoke
-```
-
-The runner synthesizes prompt text to match requested lengths; it does not replay
-original prompt semantics. It writes request rows, summaries, and shape traces
-under `cache-sparse-attention/results/`. These generated files are ignored.
-A synthetic trace run is a smoke test, not a paper workload reproduction.
-
-For real measurements preserve: exact command and Git SHA; model and tokenizer
-revisions; Python/PyTorch/Transformers/CUDA versions; GPU model/count/memory;
-input-trace hash and construction command; scheduler settings; seeds; failures;
-request-level timestamps and completion counts; and shape traces. Run matched
-FIFO and ShapeShift settings, repeat seeds, and separately check output quality.
-Never overwrite archived `results/paper/` files with reconstruction measurements.
+Use [SMALL_MATRIX.md](SMALL_MATRIX.md) for the current timestamp-replay CLI and
+36-run pilot. The v1 `--policies`/`--tag` commands are retired. The corrected
+runner uses one policy per process and requires explicit checkpoint revision,
+trace and exclusive output directory. The source and results in `paper/` and
+`cache-sparse-attention/results/paper/` are not changed by this protocol update.
 
 ## Historical limitations
 

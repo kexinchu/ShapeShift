@@ -31,10 +31,11 @@ class Request:
 
     @property
     def compatibility_key(self) -> tuple:
-        # Upstream step_batch uses the first row's sampling configuration.
+        # Pinned step_batch reads step/block progress per row; no progress grouping.
+        # It uses the first row's sampling configuration.
         # Equal generation lengths also make max(P + G) the actual padded width.
         s, p = self.state, self.params
-        return (s.block_idx, s.step_in_block, s.block_length, s.steps_per_block,
+        return (s.block_length, s.steps_per_block,
                 s.gen_length, p.temperature, p.use_local_leap,
                 p.local_leap_anchor_threshold, p.local_leap_neighbor_threshold,
                 p.local_leap_radius)
@@ -43,7 +44,7 @@ class Request:
 class ShapeShiftScheduler:
     """Bounded active pool, step-level nearest-length fill, aging and compactness."""
 
-    POLICIES = {"fifo", "length_bucket", "aging_bucket", "shapeshift"}
+    POLICIES = {"fifo", "static_bucket_fifo", "sjf_step", "length_bucket", "aging_bucket", "shapeshift"}
     ALIASES = {"shape_only": "length_bucket", "shape_aging_old": "aging_bucket",
                "token_budget": "shapeshift"}
 
@@ -51,7 +52,11 @@ class ShapeShiftScheduler:
                  shape_policy: str = "shapeshift", shape_slo_ms: float = 5000,
                  active_pool_factor: int = 4, padding_ratio: float = 1.25,
                  trace_csv: str | Path | None = None,
+                 bucket_width: int = 256, compatibility_mode: str = "progress_independent",
                  clock: Callable[[], float] | None = None):
+        self.bucket_width = bucket_width
+        self.compatibility_mode = compatibility_mode
+        self.trace_rows = []
         self.max_batch = max_batch
         self.max_waiting = max_waiting
         self.shape_policy = shape_policy
@@ -73,7 +78,7 @@ class ShapeShiftScheduler:
                                        "padded_tokens", "padding_ratio", "anchor_gap_ms"])
 
     def _validate(self) -> str:
-        for name in ("max_batch", "active_pool_factor", "max_waiting"):
+        for name in ("max_batch", "active_pool_factor", "max_waiting", "bucket_width"):
             value = getattr(self, name)
             if isinstance(value, bool) or not isinstance(value, int) or value < 1:
                 raise ValueError(f"{name} must be a positive integer")
@@ -81,6 +86,8 @@ class ShapeShiftScheduler:
             raise ValueError("shape_slo_ms must be finite and nonnegative")
         if not math.isfinite(self.padding_ratio) or self.padding_ratio < 1:
             raise ValueError("padding_ratio must be finite and >= 1")
+        if self.compatibility_mode not in {"strict", "progress_independent"}:
+            raise ValueError("unknown compatibility_mode")
         policy = self.ALIASES.get(self.shape_policy, self.shape_policy)
         if policy not in self.POLICIES:
             raise ValueError(f"unknown policy: {self.shape_policy}")
@@ -117,16 +124,24 @@ class ShapeShiftScheduler:
             return []
         now = self._clock()
         overdue = [r for r in self._active if now - r.last_service_ms >= self.shape_slo_ms]
-        if policy == "fifo":
+        if policy in {"fifo", "static_bucket_fifo"}:
             anchor = min(self._active, key=lambda r: r.req_id)
         elif policy in {"aging_bucket", "shapeshift"} and overdue:
             anchor = min(overdue, key=lambda r: (r.last_service_ms, r.req_id))
         else:
             anchor = min(self._active, key=lambda r: (r.total_len, r.last_service_ms, r.req_id))
         candidates = [r for r in self._active if r is not anchor
-                      and r.compatibility_key == anchor.compatibility_key]
-        if policy == "fifo":
+                      and r.compatibility_key == anchor.compatibility_key
+                      and (self.compatibility_mode != "strict" or
+                           (r.state.block_idx, r.state.step_in_block) ==
+                           (anchor.state.block_idx, anchor.state.step_in_block))]
+        if policy == "static_bucket_fifo":
+            band = (anchor.total_len - 1) // self.bucket_width
+            candidates = [r for r in candidates if (r.total_len - 1) // self.bucket_width == band]
+        if policy in {"fifo", "static_bucket_fifo"}:
             candidates.sort(key=lambda r: r.req_id)
+        elif policy == "sjf_step":
+            candidates.sort(key=lambda r: (r.total_len, r.last_service_ms, r.req_id))
         else:
             candidates.sort(key=lambda r: (abs(r.total_len - anchor.total_len),
                                             r.last_service_ms, r.req_id))
@@ -146,12 +161,18 @@ class ShapeShiftScheduler:
         for req in chosen:
             req.last_service_ms = now
         if self.trace_csv:
-            with self.trace_csv.open("a", newline="") as f:
-                csv.writer(f).writerow([self._tick, now, policy,
+            self.trace_rows.append([self._tick, now, policy,
                     ";".join(str(r.req_id) for r in chosen), len(chosen), width,
                     useful, len(chosen) * width, len(chosen) * width / useful, anchor_gap])
         self._tick += 1
         return chosen
+
+    def flush_trace(self) -> None:
+        """Flush buffered metadata outside measured execution."""
+        if self.trace_csv and self.trace_rows:
+            with self.trace_csv.open("a", newline="") as f:
+                csv.writer(f).writerows(self.trace_rows)
+            self.trace_rows.clear()
 
     def complete(self, req: Request) -> None:
         if req in self._active:

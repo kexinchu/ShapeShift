@@ -50,15 +50,15 @@ class PaperAuditTests(unittest.TestCase):
             expected = paper_select(reqs, now, b, tau, beta)
             self.assertEqual([r.req_id for r in scheduler.schedule()], expected)
 
-    def test_witness_mixed_steps_do_not_match_unrestricted_paper_pool(self):
+    def test_mixed_steps_now_match_paper_pool(self):
         scheduler = ShapeShiftScheduler(max_batch=2, shape_slo_ms=5000, clock=lambda: 0)
         reqs = [scheduler.admit(*make_state(length, step))
                 for length, step in [(100, 0), (101, 1), (110, 0)]]
         reference = paper_select(reqs, 0, 2, 5000, 1.25)
         actual = [r.req_id for r in scheduler.schedule()]
         self.assertEqual(reference, [0, 1])
-        self.assertEqual(actual, [0, 2])
-        self.assertNotEqual(actual, reference)  # documents the extra constraint
+        self.assertEqual(actual, [0, 1])
+        self.assertEqual(actual, reference)
 
     @unittest.skipUnless(importlib.util.find_spec('dlmserve') is not None,
                          'optional pinned upstream not installed')
@@ -78,24 +78,19 @@ class PaperAuditTests(unittest.TestCase):
                     state.step_in_block = step
                     scheduler.admit(state, params)
             self.assertEqual([r.req_id for r in upstream.schedule()], [1, 2])
-            self.assertEqual([r.req_id for r in rebuilt.schedule()], [0])
+            self.assertEqual([r.req_id for r in rebuilt.schedule()], [0, 1])
 
-    def test_witness_trace_reader_discards_order_and_arrival_times(self):
-        path = Path(__file__).resolve().parents[1] / 'cache-sparse-attention/code/run_dlmserve_online_trace_benchmark.py'
-        spec = importlib.util.spec_from_file_location('audit_runner', path)
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
+    def test_trace_reader_preserves_order_and_arrival_times(self):
+        from shapeshift.replay import load_trace
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp)/'rows.csv'
             with path.open('w', newline='') as f:
                 w = csv.writer(f)
-                w.writerow(['source', 'prompt_len', 'total_len', 'arrival_ms'])
-                w.writerows([['test', n, n+8, n*n] for n in range(10, 20)])
-            actual = module.load_lengths(path, source='test', n_requests=10,
-                min_total_len=0, max_total_len=4096, seed=13)
-            self.assertNotEqual(actual, list(range(10, 20)))
-            self.assertEqual(sorted(actual), list(range(10, 20)))
-            self.assertTrue(all(isinstance(n, int) for n in actual))
+                w.writerow(['source', 'request_uid', 'prompt_len', 'gen_len', 'total_len', 'arrival_ms'])
+                w.writerows([['test', str(n), n, 128, n+128, n*n] for n in range(10,20)])
+            actual = load_trace(path)
+            self.assertEqual([r.prompt_len for r in actual], list(range(10,20)))
+            self.assertEqual([r.arrival_ms for r in actual], [n*n-100 for n in range(10,20)])
 
 
 if __name__ == '__main__':

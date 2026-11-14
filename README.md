@@ -38,8 +38,9 @@ python -m pip install -e '.[runtime]'
 python cache-sparse-attention/code/run_dlmserve_online_trace_benchmark.py --help
 ```
 
-See [reproduction instructions](docs/REPRODUCIBILITY.md) for an executable
-benchmark example, trace schema, limitations, and evidence requirements.
+See [the v2 replay and 36-run pilot guide](docs/SMALL_MATRIX.md) for timestamp
+replay, baseline definitions, input preparation, preflight, execution and resume.
+The old benchmark path now forwards to this explicitly versioned protocol.
 The reconstructed adapter supports LLaDA deterministic decoding; the old
 Dream, CoDA, and LLaDA2-mini integrations have not been recovered.
 

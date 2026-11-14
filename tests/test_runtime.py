@@ -65,17 +65,10 @@ class RuntimeTests(unittest.TestCase):
                 for r, expected in zip(requests, reference):
                     self.assertTrue(torch.equal(r.state.seq, expected))
 
-    def test_benchmark_does_not_count_failed_requests_as_completions(self):
-        import asyncio
-        import importlib.util
-        from pathlib import Path
-        runner_path = Path(__file__).resolve().parents[1] / "cache-sparse-attention/code/run_dlmserve_online_trace_benchmark.py"
-        spec = importlib.util.spec_from_file_location("benchmark_runner", runner_path)
-        runner = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(runner)
-        runner.torch = torch
-        loaded = NS(model=ToyModel(), tokenizer=ToyTokenizer(),
-                    device=torch.device("cpu"), mask_id=15)
+    def test_replay_counts_model_failures_and_completes_other_requests(self):
+        from shapeshift.replay import TraceRequest, replay
+        loaded = NS(model=ToyModel(), tokenizer=ToyTokenizer(), device=torch.device("cpu"), mask_id=15)
+        params = SamplingParams(gen_length=8, num_denoising_steps=4)
         with patch("dlmserve.engine.load_model", return_value=loaded):
             engine = Engine(device="cpu", max_batch=1)
             step = engine._step_batch
@@ -84,16 +77,38 @@ class RuntimeTests(unittest.TestCase):
                     raise RuntimeError("injected model failure")
                 return step(batch)
             engine._step_batch = fail_long
-            with self.assertLogs("dlmserve.engine", level="ERROR"):
-                rows, summary, _ = asyncio.run(runner.benchmark_policy(
-                    engine=engine, prompts=["3", "20"], prompt_lens=[3, 20],
-                    params=SamplingParams(gen_length=8, num_denoising_steps=4),
-                    max_batch=1, policy="fifo", n_requests=2, arrival_gap_ms=0,
-                    seed=13, shape_slo_ms=5000, active_pool_factor=4,
-                    device=torch.device("cpu")))
-            self.assertEqual(summary["n_completed"], 1)
-            self.assertEqual(summary["n_failed"], 1)
-            self.assertEqual([r["status"] for r in rows], ["done", "failed"])
+            rows, events, summary = replay(engine,
+                [TraceRequest("a", "test", 0, 3, 8), TraceRequest("b", "test", 0, 20, 8)],
+                params, lambda r: init_state(torch.ones((1,r.prompt_len),dtype=torch.long),params,15))
+            self.assertEqual(summary["n_completed"],1)
+            self.assertEqual(summary["n_failed"],1)
+            self.assertFalse(summary["valid_for_comparison"])
+            self.assertEqual([r['status'] for r in rows], ['done','failed'])
+            self.assertTrue(events)
+
+    def test_context_dependent_model_mixed_progress_matches_individual_steps(self):
+        import copy
+        class ContextModel(torch.nn.Module):
+            def forward(self, input_ids, attention_mask=None, position_ids=None):
+                context = (input_ids*attention_mask).sum(dim=1,keepdim=True)
+                target = 1+(position_ids+context)%10
+                logits = torch.zeros((*input_ids.shape,16))
+                logits.scatter_(2,target[...,None],(2+position_ids.float()/10)[...,None])
+                return NS(logits=logits)
+        model = ContextModel()
+        params = SamplingParams(gen_length=8, block_length=4, num_denoising_steps=8)
+        originals = [init_state(torch.ones((1,n),dtype=torch.long),params,15) for n in [3,7,20]]
+        for state, advance in zip(originals,[0,1,4]):
+            for _ in range(advance):
+                step_batch(model,[state],mask_id=15,pad_token_id=0)
+        expected = copy.deepcopy(originals)
+        for state in expected:
+            step_batch(model,[state],mask_id=15,pad_token_id=0)
+        step_batch(model,originals,mask_id=15,pad_token_id=0)
+        for actual, reference in zip(originals,expected):
+            self.assertTrue(torch.equal(actual.seq,reference.seq))
+            self.assertEqual((actual.block_idx,actual.step_in_block),
+                             (reference.block_idx,reference.step_in_block))
 
     def test_engine_generate_uses_adapter_and_completes_futures(self):
         loaded = NS(model=ToyModel(), tokenizer=ToyTokenizer(),

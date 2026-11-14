@@ -1,0 +1,30 @@
+{
+  "protocol": "shapeshift-replay-v2",
+  "purpose": "New reconstruction pilot; not a reproduction of historical paper numbers",
+  "workloads": [
+    {"name": "alpaca", "trace": "data/alpaca.csv"},
+    {"name": "sharegpt", "trace": "data/sharegpt.csv"},
+    {"name": "openorca", "trace": "data/openorca.csv"}
+  ],
+  "policies": ["fifo", "length_bucket", "aging_bucket", "shapeshift"],
+  "seeds": [13, 17, 23],
+  "parameters": {
+    "input_mode": "length_proxy",
+    "arrival_mode": "timestamps",
+    "limit": 96,
+    "spacing": 1.0,
+    "steps": 128,
+    "gen_length": 128,
+    "max_batch": 8,
+    "max_waiting": 256,
+    "shape_slo_ms": 5000,
+    "active_pool_factor": 4,
+    "padding_ratio": 1.25,
+    "bucket_width": 256,
+    "compatibility_mode": "progress_independent",
+    "dtype": "bf16",
+    "device": "cuda:0",
+    "warmup_batches": 2,
+    "timeout_s": 3600
+  }
+}
