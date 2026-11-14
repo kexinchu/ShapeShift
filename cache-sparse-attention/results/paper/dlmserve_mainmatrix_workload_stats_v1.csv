@@ -1,0 +1,7 @@
+workload,mean_prompt_len,min_prompt_len,max_prompt_len,n_completed,n_failed
+Alpaca instruction,26.572916666666668,12,67,96,0
+HotpotQA/Wikipedia,402.03125,157,799,96,0
+Multitask mix,609.3333333333334,1,1859,96,0
+OpenOrca/FLAN instr.,142.01388888888889,7,1471,96,0
+ShareGPT mixed,707.3645833333334,1,1877,96,0
+ShareGPT multiturn,761.7604166666666,6,1803,96,0

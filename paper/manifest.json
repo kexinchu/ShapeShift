@@ -1,0 +1,110 @@
+[
+  {
+    "path": "ShapeShift-camera-ready.pdf",
+    "sha256": "81a911da1c5b70a71ce46540f016fa73b4c9febf546196d9093962795d1d1f32"
+  },
+  {
+    "path": "figures/ShapeShift-Arch.pdf",
+    "sha256": "eeb1186ae7cfa4953ceaea795a0f48076dbb5f98368a87f6bd9d70e13c92c382"
+  },
+  {
+    "path": "figures/bar_coda17b_mean.pdf",
+    "sha256": "079dad4de577c667112aa0ef3678dcd8e8af0c170232498994c20ba1db8c1044"
+  },
+  {
+    "path": "figures/bar_coda17b_p95.pdf",
+    "sha256": "e02cfa5c56d5f1f5952344400a5c982d8125b5d7420e7a9d68aa103dd7e06222"
+  },
+  {
+    "path": "figures/bar_coda17b_throughput.pdf",
+    "sha256": "0c99403b5626a9dd52119fb417c39ff13bbd2466106b88ac823c99ad593b5899"
+  },
+  {
+    "path": "figures/bar_dream7b_mean.pdf",
+    "sha256": "29a1d12de324862e7ac77419b365a2e0d81dfb166bfee3e38d5934dc19ad7105"
+  },
+  {
+    "path": "figures/bar_dream7b_p95.pdf",
+    "sha256": "02cfbe077c4a43272039f82abe3c502934366c069ce7f1b36c836bc402bbe87a"
+  },
+  {
+    "path": "figures/bar_dream7b_throughput.pdf",
+    "sha256": "b9ad9b84bdad01480c6d3160c87b5f5327a17390ccdb449f01ca169887b29b6e"
+  },
+  {
+    "path": "figures/bar_llada2mini_mean.pdf",
+    "sha256": "dfcab0c998c4ee12ff0ca46e3e585df1afb0a69cd87699ca6e102d6154237e98"
+  },
+  {
+    "path": "figures/bar_llada2mini_p95.pdf",
+    "sha256": "31f629b242a7be4b27c9dfe9fc6f318ee59da39d8fb3d4fb97746b2ce49e8b36"
+  },
+  {
+    "path": "figures/bar_llada2mini_throughput.pdf",
+    "sha256": "3f11f9af7c46e54ae9729112d1aa305af93e55bb4c2656f92cbc7c50932bca26"
+  },
+  {
+    "path": "figures/bar_llada8b_mean.pdf",
+    "sha256": "d28cc04e9c0cc9dee0ef4700081e40c3d8c79ebcea5dfba0b05c184ad17f770e"
+  },
+  {
+    "path": "figures/bar_llada8b_p95.pdf",
+    "sha256": "d4665435bed22b1c2a162f094f5d7070fc835cd6c7fd70785a97dc028aefd3c0"
+  },
+  {
+    "path": "figures/bar_llada8b_throughput.pdf",
+    "sha256": "cd3764926b0ed2c250cff1a042ab2e684f578bae6d2351ecff49de846153c249"
+  },
+  {
+    "path": "figures/fig_ablation_combined.pdf",
+    "sha256": "c76717616dd1601da12f507af7ae8cf140e7031503146daaca1703d80d81073b"
+  },
+  {
+    "path": "figures/fig_dinfer_combined.pdf",
+    "sha256": "f142945e6b1dccfabe2b712592047495704c2d7ed6d40a1d87ca5119e205c367"
+  },
+  {
+    "path": "figures/fig_fullstep_combined.pdf",
+    "sha256": "41d80caf716edc25c73e316a155150e8de4d02e0a6964559b9315716eda94017"
+  },
+  {
+    "path": "llncs.cls",
+    "sha256": "e9894c92191fcd195eef3120a36d2f75b52030eadcbdc3ce1463179746526e6a"
+  },
+  {
+    "path": "main.tex",
+    "sha256": "ddcedf865808740baba7c1487851b2ab2a8646e84504cc374db8135c82194874"
+  },
+  {
+    "path": "plot_ablation_llada8b.py",
+    "sha256": "6f67aea9b8680fb4b87d917e4e555f254a2ad4f0263d90dfb8a7b3570f26cb60"
+  },
+  {
+    "path": "plot_all_figures.py",
+    "sha256": "4fcf9ed0b4ed4a1ef9b9de9259c744e4860decb2e5136bfa4ce046e6c582441a"
+  },
+  {
+    "path": "plot_dinfer_wrapper.py",
+    "sha256": "8ff1081445689d53cdddadc8b955f5c15073b28e8b821177468bb8b0cb8f9587"
+  },
+  {
+    "path": "plot_fullstep_llada8b.py",
+    "sha256": "67a42df482f4819a1b4aad1758cfaa4439eaf04b3fbd640f61bca2f24496f5a1"
+  },
+  {
+    "path": "plot_main_online_combined.py",
+    "sha256": "e13e305965180d21fb504e7dc895dab0dd7da28dd8b37b20766014050f5f1c38"
+  },
+  {
+    "path": "plot_utils.py",
+    "sha256": "77eb8faa1d2a3bbff69d4cc968e61d5ecd54c3c6ed598596bc9ce6fcee32dac6"
+  },
+  {
+    "path": "references.bib",
+    "sha256": "d0553697d33b9afc5d759aed0d0e745c51430b502e018350c5cde5eba3c4ca34"
+  },
+  {
+    "path": "splncs04.bst",
+    "sha256": "f36c3a17e5304a692706359aafa9de709395a085e579eb47c027095aeaa35174"
+  }
+]

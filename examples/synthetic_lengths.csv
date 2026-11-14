@@ -1,0 +1,9 @@
+source,request_uid,prompt_len,gen_len,total_len
+synthetic,0,64,128,192
+synthetic,1,1024,128,1152
+synthetic,2,96,128,224
+synthetic,3,512,128,640
+synthetic,4,80,128,208
+synthetic,5,896,128,1024
+synthetic,6,128,128,256
+synthetic,7,448,128,576

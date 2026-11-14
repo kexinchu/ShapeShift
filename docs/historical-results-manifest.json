@@ -1,0 +1,373 @@
+[
+  {
+    "path": "cache-sparse-attention/results/paper/dinfer_online_hotpotqa_wikipedia_n48_b8_g128_seed41_summary.csv",
+    "sha256": "f81ed365fbf6b27911053bdef71739ae257ec862730cfd4333db162c3f75d5f6",
+    "rows": 2,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dinfer_online_instruction_mix_n48_b8_g128_seed41_summary.csv",
+    "sha256": "f4671655246ec873428d9e8257ba1c7e8cee68a0a0a9b24509cba76b29312709",
+    "rows": 3,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dinfer_online_multitask_n48_b8_g128_seed41_summary.csv",
+    "sha256": "9258b47c62c5d025f98daa9014f0ee0384cc1e09bf10712a57a3ead67c130ff7",
+    "rows": 3,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dinfer_online_sharegpt_multiturn_n48_b8_g128_seed41_summary.csv",
+    "sha256": "01749914718a82718ac2e4eb26d051fc8384d131ef4284635720e2f09d089286",
+    "rows": 2,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_32step_alpaca_n48_b8_s32_seed13_v1_summary.csv",
+    "sha256": "f47546b048ad4cc816c1c852b3324e5e57653875d956c3726868030916ae38d7",
+    "rows": 4,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_32step_hotpotqa_n48_b8_s32_seed13_v1_summary.csv",
+    "sha256": "a2a9c52cb9e9769aa7ca49b2ec061c6ecf5578d9a56c250e6ef348d8427a0436",
+    "rows": 4,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_32step_instruction_mix_n48_b8_s32_seed13_v1_summary.csv",
+    "sha256": "f30ea9c34bea4aae076f735fdd35cb659673f6371890b9db6fecbcb2d663ea68",
+    "rows": 4,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_32step_multitask_n48_b8_s32_seed13_v1_summary.csv",
+    "sha256": "b1ea4ee4403a27fc34121177c70ba81235c8f8231a5ec77a86bddcaff7faeca1",
+    "rows": 4,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_32step_sharegpt_n48_b8_s32_seed13_v1_summary.csv",
+    "sha256": "e92eb8eaaeba4391d02d3f63c2356d4f998650826ff05dc8cb6ea69e494c7af6",
+    "rows": 4,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_aging_bucket_alpaca_instruction_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "8a2eef375663a4de8de01bb4cc7653c6a56504b38cd4be6a63066e02684d7da2",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_aging_bucket_hotpotqa_wikipedia_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "e707e31acb969a9973015569ec47c4882eccfbb3fb87a53cf06565880515bf10",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_aging_bucket_instruction_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "6bd02aab2e00262d386646c97cebc4b759b745efa977fdab0e3b7c4f6fe3ceeb",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_aging_bucket_multitask_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "e50a591af9498fddb5de954ddf830d8c4b72fcadec64374c84637372798adb88",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_aging_bucket_sharegpt_mixed_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "64111489dc0ea37848a194ef8ba165c3dfde46bb57d413a10c1edb8c2a0b67f8",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_aging_bucket_sharegpt_multiturn_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "9b23df9952b251b62ec652bec3f414ed238e49befc747b78da215f8754a3d97f",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_fifo_alpaca_instruction_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "69cf3f98b1fcab0311be279468d38ac949241d6dc89220694f521bfece4b82d2",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_fifo_hotpotqa_wikipedia_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "a28d382784f93015df22c02358e61387f958b7730782301835adc92653af0c3e",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_fifo_instruction_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "75efe503f3d7b3bb33538108699731a41eb96fe1208a023c464ef012abac4bf9",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_fifo_multitask_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "7d0c08bc5df609570257efff562a156bf0cdc0d06bbe4c63430129ee6df37a8f",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_fifo_sharegpt_mixed_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "37f55552ff929812954ec4c2230691f91547eb6c481572730c97d1618c45aaaa",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_fifo_sharegpt_multiturn_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "42a4e9befb140603669c2dc105c0db03089059e6fdb89f77d9d0551f4ed2dc5e",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_length_bucket_alpaca_instruction_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "1fd44f28d95eb2524791f0a05cb68804f46a299357b9c8e51626ac4460c3f702",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_length_bucket_hotpotqa_wikipedia_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "1bb67cab3771bef4613df40ce8db8df76fd8a16396a1f900bc969c5a4d1d8088",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_length_bucket_instruction_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "b18456be1c2af8446fbf8972287e636b44e0a19382d0e1cd3be78c50f788bc5c",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_length_bucket_multitask_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "e4d718236908008603b80aaa2ab658e342c55c5934efdb717f1702dad366c852",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_length_bucket_sharegpt_mixed_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "b16a9453931698fd93ae7e9402208e502d5d0f7e121b72e50580ec37430f4f2a",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_length_bucket_sharegpt_multiturn_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "531557726e8eb57370a2d6e8bfe8976e5987535fcdce04f7a174d4daf8988741",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_shapeshift_alpaca_instruction_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "61968e3a98270b51a36cc063220dfa2caaa06225631d845cafb843950594bc51",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_shapeshift_hotpotqa_wikipedia_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "5f55c314b9ec1a3481f4a622ad042aa636e3f06c45b8fd265fd566a0612b5621",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_shapeshift_instruction_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "c5595aed2c11fa443395a5ce92b0decd57332393cf0de990ae85d56cbd4c52b7",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_shapeshift_multitask_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "8f8a1d456e65b8f439c93925ba0988bde6a763773509e2cf9e6d0b2b175923fb",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_shapeshift_sharegpt_mixed_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "5e0b34a6e51b2bce852518978afdb3ec5c5722949f9a3812448829c0acb927b4",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_llada_shapeshift_shapeshift_sharegpt_multiturn_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "184ee696074fb77f8f3c4127eb3e50efc66d0e5c9e3c43fa0c1e776bf60cbdc5",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_mainmatrix_aggregate_v1.csv",
+    "sha256": "247bf05fbd322abda0167ceb4403cfbf285e726b25f55ef10392be0b32af11ff",
+    "rows": 30,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_mainmatrix_workload_stats_v1.csv",
+    "sha256": "cb03ec328a8aadc32a781b3306f64133a398f12bb102c3d1ee55bc15044dd44b",
+    "rows": 6,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_coda_shapeshift_alpaca_instruction_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "4b016180d582ad86c2df486256c543be4770845b81ede2c295a659f4280478a5",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_coda_shapeshift_hotpotqa_wikipedia_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "9d96ada409045bf752a6d50a283f3e2ee899114e9e56af698147f6eb32f77c2e",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_coda_shapeshift_instruction_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "bdcf81b62cecbb13eb0273ca40b39f4717d80b5b23a7a340e7abe2b1905df8c1",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_coda_shapeshift_multitask_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "c68295ec3033817c5678fe56dea006fb9a0f500db1cf031c0356d8b2b0f4c634",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_coda_shapeshift_sharegpt_mixed_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "51ffcfa801a329a09e5e776180eb7b6f9a5750776ba58f3379c7f1bb59bd3c90",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_coda_shapeshift_sharegpt_multiturn_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "e5a7eb6a625ec8a32fcf1279d9481614d72986188e605ff4581878115a3af839",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_dream_shapeshift_alpaca_instruction_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "749de0d3c8988462890a6919ecd7504749858679c17a3b3aa9de9fd28373205f",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_dream_shapeshift_hotpotqa_wikipedia_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "3ca09a7d2dc9fac7294e5691a588edd8889c1f20c34a5a683905ff96c9b4b450",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_dream_shapeshift_instruction_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "2ba73e1e06cbda4212cc18406fa40e6db301cba2a8bf3f63036168c64afaa239",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_dream_shapeshift_multitask_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "38ff39473a5b1da02bfdcf904b2758dbadffa9aaffa7401979ac925e106b1c70",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_dream_shapeshift_sharegpt_mixed_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "607c12c4b02a5a4af55614d910cb7414ac59492f18ebaf26aa92c9c1e8a928dd",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_dream_shapeshift_sharegpt_multiturn_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "8c3d03a6f6fe5b17c3f1d708c3c8f5bc79efa767ee036c9ac889cb506dcd87d5",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_llada2mini_shapeshift_alpaca_instruction_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "dfc401cd58b58a0feac466709e0a70ec46515e32609190c565318ecba0b7c9c5",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_llada2mini_shapeshift_hotpotqa_wikipedia_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "0b4e586fe06de20459ff04ee9d042122719dd42b8d52b3498e95f6c5c43c53d7",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_llada2mini_shapeshift_instruction_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "102d865b05ff87547c6fd8fe0be1d8dead7c94b3de0cb6adc6c25f7326bd2af1",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_llada2mini_shapeshift_multitask_mix_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "6a9c1669e1cc98a1fafa26370c7d314208905852b368acb0ac8603d9fe0d5ef9",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_llada2mini_shapeshift_sharegpt_mixed_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "8fc8756468c7f323e96d705175620559a67fa2303ca480eb59ac03c3ea6e8760",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  },
+  {
+    "path": "cache-sparse-attention/results/paper/dlmserve_model_llada2mini_shapeshift_sharegpt_multiturn_n96_b8_s8_seed13_v1_summary.csv",
+    "sha256": "12114ec0c1f4519b7b3d2e239442d5c5489635a5c3899ae995a63dbfff229ff2",
+    "rows": 1,
+    "provenance": "historical-original-runtime-not-reconstructed",
+    "sanitization": "machine-local trace paths replaced with repository-relative references; metrics unchanged"
+  }
+]

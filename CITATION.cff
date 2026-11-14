@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "For the research, cite the camera-ready paper in paper/. This citation identifies the reconstructed software artifact."
+title: "ShapeShift: Reconstructed Active-Shape Scheduler"
+type: software
+authors:
+  - family-names: Chu
+    given-names: Kexin
+version: 0.1.0
+license: MIT

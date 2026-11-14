@@ -1,0 +1,101 @@
+# Heavy model caches and local HF state
+model_cache/
+.cache/
+.conda/
+.venvs/
+
+# Runtime/sandbox metadata
+.agents/
+.codex/
+.claude/
+.pytest_cache/
+**/.pytest_cache/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Large raw attention-analysis artifacts from the initial pilot.
+# The compact summaries and plots are kept.
+results/raw/
+
+# Runtime PID/state files
+early-stop/run/
+
+# Local experiment workspaces that are not part of the public ShapeShift
+# artifact. Use git rm --cached when removing previously tracked files.
+/early-stop/
+/code/
+/plots/
+/logs/
+/scripts/
+/results/
+/figure-studio-runs/
+/results.txt
+/ANALYSIS_TEMPLATE.md
+/RESEARCH_PLAN.md
+/RESULTS_REPORT.md
+/RUNBOOK.md
+
+# Duplicate migration archives. The underlying notes/results/logs are tracked.
+early-stop/migration_context_*.tgz
+
+# ShapeShift local-only assets. The public artifact keeps source code, paper
+# files, generated paper figures, and a small curated results/paper subset.
+cache-sparse-attention/agents/
+cache-sparse-attention/data/
+cache-sparse-attention/experiments/
+cache-sparse-attention/external/
+cache-sparse-attention/logs/
+cache-sparse-attention/notes/
+cache-sparse-attention/results/*
+!cache-sparse-attention/results/paper/
+!cache-sparse-attention/results/paper/**
+
+# Keep the public code surface compact; local probes and one-off launchers stay
+# outside the release unless explicitly promoted.
+cache-sparse-attention/code/*
+!cache-sparse-attention/code/README.md
+!cache-sparse-attention/code/aggregate_dlmserve_mainmatrix.py
+!cache-sparse-attention/code/analyze_dlmserve_scheduler_results.py
+!cache-sparse-attention/code/build_dinfer_trace_dataset.py
+!cache-sparse-attention/code/build_dlmserve_trace_from_rows.py
+!cache-sparse-attention/code/build_instruction_longctx_traces.py
+!cache-sparse-attention/code/build_scheduler_stress_traces.py
+!cache-sparse-attention/code/build_serving_workload_traces.py
+!cache-sparse-attention/code/build_sharegpt_mixed_length_trace.py
+!cache-sparse-attention/code/plot_main_online_policy_bars.py
+!cache-sparse-attention/code/run_dinfer_online_trace_benchmark.py
+!cache-sparse-attention/code/run_dlmserve_online_trace_benchmark.py
+!cache-sparse-attention/code/run_fastdllm_llada_compare.py
+!cache-sparse-attention/code/run_fastdllm_offline_trace_benchmark.py
+!cache-sparse-attention/code/simulate_shape_fragmentation_scheduler.py
+
+# LaTeX build products. Keep source .tex/.bib/.sty and the rendered PDF.
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.synctex.gz
+early-stop/paper/latex/*.log
+
+# Editor / OS clutter
+.DS_Store
+*~
+
+# Credentials, local environments, and generated release bundles
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.venv/
+venv/
+dist/
+*.egg-info/
+build/
+
+# Canonical paper PDF is named explicitly; ignore regenerated builds.
+/paper/main.pdf

@@ -1,0 +1,31 @@
+name: CPU tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  scheduler:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install -e .
+      - run: python -m unittest discover -s tests -v
+      - run: python cache-sparse-attention/code/run_dlmserve_online_trace_benchmark.py --help
+  runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install 'transformers>=4.44,<5' accelerate prometheus-client
+      - run: python -m pip install --no-deps 'dlmserve @ git+https://github.com/iOptimizeThings/dlmserve.git@dd3efe743a65e0142627e105e8d18bcc1c33d6cb'
+      - run: python -m pip install -e .
+      - run: python -c 'import dlmserve, torch'
+      - run: python -m unittest discover -s tests -v

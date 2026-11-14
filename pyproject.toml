@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shapeshift-dllm"
+version = "0.1.0"
+description = "Reconstructed active-shape scheduling for diffusion language model serving"
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+runtime = ["dlmserve @ git+https://github.com/iOptimizeThings/dlmserve.git@dd3efe743a65e0142627e105e8d18bcc1c33d6cb"]
+analysis = ["numpy", "pandas", "matplotlib"]
+
+[tool.setuptools.packages.find]
+include = ["shapeshift*"]
