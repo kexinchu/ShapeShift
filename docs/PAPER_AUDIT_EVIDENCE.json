@@ -1,0 +1,310 @@
+{
+  "audited_base_commit": "867ac04f15f57025b1a396529492f3369b54a438",
+  "summary_files": 51,
+  "summary_rows": 72,
+  "summary_field_counts": {
+    "steps": {
+      "not_recorded": 10,
+      "32": 20,
+      "8": 42
+    },
+    "seed": {
+      "41": 10,
+      "13": 62
+    },
+    "n_requests": {
+      "48": 30,
+      "96": 42
+    },
+    "arrival_gap_ms": {
+      "0.0": 72
+    },
+    "policy": {
+      "fifo": 15,
+      "aging_bucket": 15,
+      "length_bucket": 13,
+      "length_sorted_admission": 5,
+      "shapeshift": 24
+    }
+  },
+  "fullstep_rounded_value_matches": [
+    {
+      "figure_series": "FCFS",
+      "figure_workload": "ShareGPT",
+      "figure_tok_s": 20.7,
+      "figure_p95_s": 296.8,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_hotpotqa_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "fifo"
+        }
+      ]
+    },
+    {
+      "figure_series": "FCFS",
+      "figure_workload": "Multitask",
+      "figure_tok_s": 7.87,
+      "figure_p95_s": 781.2,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_multitask_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "fifo"
+        }
+      ]
+    },
+    {
+      "figure_series": "FCFS",
+      "figure_workload": "OpenOrca",
+      "figure_tok_s": 10.53,
+      "figure_p95_s": 583.3,
+      "rounded_value_matches": []
+    },
+    {
+      "figure_series": "FCFS",
+      "figure_workload": "HotpotQA",
+      "figure_tok_s": 7.89,
+      "figure_p95_s": 778.8,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_sharegpt_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "fifo"
+        }
+      ]
+    },
+    {
+      "figure_series": "FCFS",
+      "figure_workload": "Alpaca",
+      "figure_tok_s": 102.55,
+      "figure_p95_s": 59.9,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_alpaca_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "fifo"
+        }
+      ]
+    },
+    {
+      "figure_series": "SHAPESHIFT_SHAPE",
+      "figure_workload": "ShareGPT",
+      "figure_tok_s": 27.14,
+      "figure_p95_s": 226.4,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_hotpotqa_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "length_bucket"
+        }
+      ]
+    },
+    {
+      "figure_series": "SHAPESHIFT_SHAPE",
+      "figure_workload": "Multitask",
+      "figure_tok_s": 11.9,
+      "figure_p95_s": 516.2,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_multitask_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "length_bucket"
+        }
+      ]
+    },
+    {
+      "figure_series": "SHAPESHIFT_SHAPE",
+      "figure_workload": "OpenOrca",
+      "figure_tok_s": 19.81,
+      "figure_p95_s": 310.1,
+      "rounded_value_matches": []
+    },
+    {
+      "figure_series": "SHAPESHIFT_SHAPE",
+      "figure_workload": "HotpotQA",
+      "figure_tok_s": 12.21,
+      "figure_p95_s": 503.1,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_sharegpt_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "length_bucket"
+        }
+      ]
+    },
+    {
+      "figure_series": "SHAPESHIFT_SHAPE",
+      "figure_workload": "Alpaca",
+      "figure_tok_s": 116.64,
+      "figure_p95_s": 52.7,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_alpaca_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "length_bucket"
+        }
+      ]
+    },
+    {
+      "figure_series": "SHAPESHIFT_AGING",
+      "figure_workload": "ShareGPT",
+      "figure_tok_s": 27.13,
+      "figure_p95_s": 226.5,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_hotpotqa_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "aging_bucket"
+        }
+      ]
+    },
+    {
+      "figure_series": "SHAPESHIFT_AGING",
+      "figure_workload": "Multitask",
+      "figure_tok_s": 11.51,
+      "figure_p95_s": 533.7,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_multitask_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "aging_bucket"
+        }
+      ]
+    },
+    {
+      "figure_series": "SHAPESHIFT_AGING",
+      "figure_workload": "OpenOrca",
+      "figure_tok_s": 19.73,
+      "figure_p95_s": 311.4,
+      "rounded_value_matches": []
+    },
+    {
+      "figure_series": "SHAPESHIFT_AGING",
+      "figure_workload": "HotpotQA",
+      "figure_tok_s": 11.88,
+      "figure_p95_s": 517.1,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_sharegpt_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "aging_bucket"
+        }
+      ]
+    },
+    {
+      "figure_series": "SHAPESHIFT_AGING",
+      "figure_workload": "Alpaca",
+      "figure_tok_s": 115.83,
+      "figure_p95_s": 53.0,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_alpaca_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "aging_bucket"
+        }
+      ]
+    },
+    {
+      "figure_series": "SHAPESHIFT",
+      "figure_workload": "ShareGPT",
+      "figure_tok_s": 29.31,
+      "figure_p95_s": 209.6,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_hotpotqa_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "length_sorted_admission"
+        }
+      ]
+    },
+    {
+      "figure_series": "SHAPESHIFT",
+      "figure_workload": "Multitask",
+      "figure_tok_s": 15.14,
+      "figure_p95_s": 405.8,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_multitask_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "length_sorted_admission"
+        }
+      ]
+    },
+    {
+      "figure_series": "SHAPESHIFT",
+      "figure_workload": "OpenOrca",
+      "figure_tok_s": 30.09,
+      "figure_p95_s": 204.2,
+      "rounded_value_matches": []
+    },
+    {
+      "figure_series": "SHAPESHIFT",
+      "figure_workload": "HotpotQA",
+      "figure_tok_s": 14.29,
+      "figure_p95_s": 430.1,
+      "rounded_value_matches": []
+    },
+    {
+      "figure_series": "SHAPESHIFT",
+      "figure_workload": "Alpaca",
+      "figure_tok_s": 116.61,
+      "figure_p95_s": 52.7,
+      "rounded_value_matches": [
+        {
+          "file": "cache-sparse-attention/results/paper/dlmserve_32step_alpaca_n48_b8_s32_seed13_v1_summary.csv",
+          "policy": "length_sorted_admission"
+        }
+      ]
+    }
+  ],
+  "dinfer_rows": [
+    {
+      "file": "cache-sparse-attention/results/paper/dinfer_online_hotpotqa_wikipedia_n48_b8_g128_seed41_summary.csv",
+      "policy": "fifo",
+      "tok_per_s": "67.2049177712081",
+      "speedup": "1.0"
+    },
+    {
+      "file": "cache-sparse-attention/results/paper/dinfer_online_hotpotqa_wikipedia_n48_b8_g128_seed41_summary.csv",
+      "policy": "aging_bucket",
+      "tok_per_s": "91.45933418390108",
+      "speedup": "1.3609024044232079"
+    },
+    {
+      "file": "cache-sparse-attention/results/paper/dinfer_online_instruction_mix_n48_b8_g128_seed41_summary.csv",
+      "policy": "fifo",
+      "tok_per_s": "13.771119899565248",
+      "speedup": "1.0"
+    },
+    {
+      "file": "cache-sparse-attention/results/paper/dinfer_online_instruction_mix_n48_b8_g128_seed41_summary.csv",
+      "policy": "length_bucket",
+      "tok_per_s": "19.039767951129473",
+      "speedup": "1.3825867532916154"
+    },
+    {
+      "file": "cache-sparse-attention/results/paper/dinfer_online_instruction_mix_n48_b8_g128_seed41_summary.csv",
+      "policy": "aging_bucket",
+      "tok_per_s": "36.710715746341435",
+      "speedup": "2.665775624210518"
+    },
+    {
+      "file": "cache-sparse-attention/results/paper/dinfer_online_multitask_n48_b8_g128_seed41_summary.csv",
+      "policy": "fifo",
+      "tok_per_s": "4.448989238630564",
+      "speedup": "1.0"
+    },
+    {
+      "file": "cache-sparse-attention/results/paper/dinfer_online_multitask_n48_b8_g128_seed41_summary.csv",
+      "policy": "length_bucket",
+      "tok_per_s": "21.264518239936322",
+      "speedup": "4.779629057156748"
+    },
+    {
+      "file": "cache-sparse-attention/results/paper/dinfer_online_multitask_n48_b8_g128_seed41_summary.csv",
+      "policy": "aging_bucket",
+      "tok_per_s": "13.331649887923204",
+      "speedup": "2.996557009435877"
+    },
+    {
+      "file": "cache-sparse-attention/results/paper/dinfer_online_sharegpt_multiturn_n48_b8_g128_seed41_summary.csv",
+      "policy": "fifo",
+      "tok_per_s": "5.116601653373448",
+      "speedup": "1.0"
+    },
+    {
+      "file": "cache-sparse-attention/results/paper/dinfer_online_sharegpt_multiturn_n48_b8_g128_seed41_summary.csv",
+      "policy": "aging_bucket",
+      "tok_per_s": "43.049216027457014",
+      "speedup": "8.413634467532578"
+    }
+  ],
+  "interpretation": "Numeric correspondence is not proof of original provenance; unmatched values require source records."
+}
